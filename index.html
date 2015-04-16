@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="index_files/style.css">
+  <script type="text/javascript" language="javascript" src="dist/main.js"></script>
+  <title>The Memory Game</title>
+</head>
+<body>
+    <div id="wrapper">
+      <div id="grid">
+
+        <button style="background-image: url(&quot;images/colour1.gif&quot;); border: medium inset red;" id="btn00" onclick="guessed(this.id, this.value)" value="1"></button>
+
+        <button style="background-image: url(&quot;images/colour2.gif&quot;); border: medium inset red;" id="btn01" onclick="guessed(this.id, this.value)" value="2"></button>
+
+        <button style="background-image: url(&quot;images/colour2.gif&quot;); border: medium none;" id="btn02" onclick="guessed(this.id, this.value)" value="2"></button>
+
+        <button style="background-image: url(&quot;images/colour4.gif&quot;); border: medium none;" id="btn03" onclick="guessed(this.id, this.value)" value="4"></button>
+
+        <button style="background-image: url(&quot;images/colour6.gif&quot;); border: medium none;" id="btn10" onclick="guessed(this.id, this.value)" value="6"></button>
+
+        <button style="background-image: url(&quot;images/colour3.gif&quot;); border: medium inset red;" id="btn11" onclick="guessed(this.id, this.value)" value="3"></button>
+
+        <button style="background-image: url(&quot;images/colour5.gif&quot;); border: medium inset red;" id="btn12" onclick="guessed(this.id, this.value)" value="5"></button>
+
+        <button style="background-image: url(&quot;images/colour7.gif&quot;); border: medium inset red;" id="btn13" onclick="guessed(this.id, this.value)" value="7"></button>
+
+        <button style="background-image: url(&quot;images/colour3.gif&quot;); border: medium none;" id="btn20" onclick="guessed(this.id, this.value)" value="3"></button>
+
+        <button style="background-image: url(&quot;images/colour1.gif&quot;); border: medium none;" id="btn21" onclick="guessed(this.id, this.value)" value="1"></button>
+
+        <button style="background-image: url(&quot;images/colour8.gif&quot;); border: medium none;" id="btn22" onclick="guessed(this.id, this.value)" value="8"></button>
+
+        <button style="background-image: url(&quot;images/colour6.gif&quot;); border: medium inset red;" id="btn23" onclick="guessed(this.id, this.value)" value="6"></button>
+
+        <button style="background-image: url(&quot;images/colour7.gif&quot;); border: medium inset red;" id="btn30" onclick="guessed(this.id, this.value)" value="7"></button>
+
+        <button style="background-image: url(&quot;images/colour8.gif&quot;); border: medium inset red;" id="btn31" onclick="guessed(this.id, this.value)" value="8"></button>
+
+        <button style="background-image: url(&quot;images/colour4.gif&quot;); border: medium inset red;" id="btn32" onclick="guessed(this.id, this.value)" value="4"></button>
+
+        <button style="background-image: url(&quot;images/colour5.gif&quot;); border: medium none;" id="btn33" onclick="guessed(this.id, this.value)" value="5"></button>
+
+<!-- new tiles -->
+        <button style="background-image: url(&quot;images/apple.jpg&quot;); border: medium inset red;" id="newTile1" onclick="guessed(this.id, this.value)" value="9"></button>
+
+        <button style="background-image: url(&quot;images/cherry.jpeg&quot;); border: medium none;" id="newTile2" onclick="guessed(this.id, this.value)" value="10"></button>
+
+        <button style="background-image: url(&quot;images/apple.jpg&quot;); border: medium none;" id="newTile3" onclick="guessed(this.id, this.value)" value="9"></button>
+
+        <button style="background-image: url(&quot;images/cherry.jpeg&quot;); border: medium inset red;" id="newTile4" onclick="guessed(this.id, this.value)" value="10"></button>
+        
+      </div>
+      <div id="gameinfo">
+        <div>
+          <img id="logo" src="index_files/logo.png">
+        </div>
+        <label id="lblHighScore">HIGH SCORE:</label>
+        <p id="highScore">0</p>
+        <br>
+        <br>
+        <br>
+        <label id="lblCurrentScore">CURRENT SCORE:</label>
+        <p id="currentScore">0</p>
+        <br>
+        <br>
+        <br>
+        <button id="restart" onclick="restart()">RESTART</button>
+      </div>
+    </div>
+
+  
+  
+</body></html>
