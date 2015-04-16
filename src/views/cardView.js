@@ -11,16 +11,13 @@ module.exports = Backbone.View.extend({
   },
   tagName: "button",
   className: "card",
-  attributes: function () {
-    return {
-      style: "background: " + this.model.get('distinctiveCharacteristic')
-    } 
-  },
   render: function () {
     if (this.model.get('faceUp')) {
      this.$el.addClass('faceUp');
+     this.$el.css('background', this.model.get('distinctiveCharacteristic'));
     } else {
      this.$el.removeClass('faceUp');
+     this.$el.css('background', '');
     } 
     return this;
   },
