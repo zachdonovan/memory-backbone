@@ -14,7 +14,7 @@ module.exports = Backbone.View.extend({
   render: function () {
     if (this.model.get('faceUp')) {
      this.$el.addClass('faceUp');
-     this.$el.css('background', this.model.get('distinctiveCharacteristic'));
+     this.$el.css('background', this.model.get('face'));
     } else {
      this.$el.removeClass('faceUp');
      this.$el.css('background', '');

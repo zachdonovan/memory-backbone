@@ -4,10 +4,13 @@ var _ = require('lodash'),
 module.exports = Backbone.Model.extend({
   defaults: {
     faceUp: false,
-    distinctiveCharacteristic: "red"
+    face: "red"
   },
   flip: function () {
     this.set('faceUp', !this.get('faceUp'));
+  },
+  hide: function () {
+    this.set('faceUp', false);
   }
 
 });
