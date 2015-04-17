@@ -4,10 +4,12 @@ var _ = require('lodash'),
 module.exports = Backbone.Model.extend({
   defaults: {
     faceUp: false,
+    matched: false,
     face: "red"
   },
-  flip: function () {
-    this.set('faceUp', !this.get('faceUp'));
+  show: function () {
+    this.set('faceUp', true);
+    Backbone.trigger('guessedCard', this);
   },
   hide: function () {
     this.set('faceUp', false);
