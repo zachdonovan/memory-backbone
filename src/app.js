@@ -1,4 +1,5 @@
 var Settings = require('./models/settings'),
+    Game = require('./models/game'),
     Player = require('./models/player'),
     Card = require('./models/card'),
     CardCollection = require('./collections/cardCollection'),
@@ -14,6 +15,11 @@ cardAttrs = _.chain(cardFaces).map(function (face) { return [ face, face ]; }).f
 
 cards = new CardCollection(cardAttrs);
 player = new Player();
+game = new Game();
+
+game.on('change:gameOver', function () {
+  confirm('would you like to play again?');
+});
 
 view$els =  cards.map(function (model) { return (new CardView(model)).$el; });
 

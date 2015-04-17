@@ -1,5 +1,5 @@
 var _ = require('lodash'),
-  Backbone = require('backbone');
+  Backbone = require('../safeBackbone');
 
 module.exports = Backbone.Model.extend({
   defaults: {

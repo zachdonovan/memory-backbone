@@ -1,6 +1,6 @@
 var _ = require('lodash'),
   Guess = require('./guess'),
-  Backbone = require('backbone');
+  Backbone = require('../safeBackbone');
 
 module.exports = Backbone.Model.extend({
   defaults: {

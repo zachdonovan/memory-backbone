@@ -13,12 +13,10 @@ module.exports = Backbone.View.extend({
   className: "card",
   render: function () {
     if (this.model.get('faceUp')) {
-     console.log('card is face up');
      this.$el.addClass('faceUp');
      this.$el.removeClass('faceDown');
      this.$el.css('background', this.model.get('face'));
     } else {
-     console.log('card is face down');
      this.$el.addClass('faceDown');
      this.$el.removeClass('faceUp');
      this.$el.css('background', '');
@@ -26,6 +24,6 @@ module.exports = Backbone.View.extend({
     return this;
   },
   flip: function () {
-    this.model.show();
+    if(!this.model.get('matched')) { this.model.show(); }
   }
 });

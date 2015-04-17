@@ -1,7 +1,6 @@
 var _ = require('lodash'),
   Card = require('./card'),
-  Set = require('./set'),
-  Backbone = require('backbone');
+  Backbone = require('../safeBackbone');
 
 module.exports = Backbone.Model.extend({
   defaults: {
