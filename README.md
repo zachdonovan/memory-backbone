@@ -9,6 +9,9 @@ cd memory-backbone
 npm install
 ```
 
+then open index.html in the browser of your choice!
+
+---
 run tests with `npm test`.
 
 after making modifications, recompile with `npm run-script compile`.
