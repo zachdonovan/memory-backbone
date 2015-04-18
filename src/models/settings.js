@@ -4,21 +4,11 @@ var _ = require('lodash'),
 
 module.exports = Backbone.Model.extend({
   defaults: {
-    sets: 10,
-    cardsPerSet: 2
-  },
-  generateCard: function () {
-    return new Card();
-  },
-  generateSet: function (color) {
-    return new Set({ color: color, cards: _.map(_.range(this.get('cardsPerSet')), function () { return new Card(); })});
-  },
-  generateAllSets: function () {
-
+    cardsPerSet: 2,
+    cardFaces: ["#0000FF", "#00FF00", "#FF0000", "#FFFF00", "#00FFFF", "#444444", "#CCCCCC", 'url(images/apple.jpg)', 'url(images/cherry.jpeg)', 'url(images/banana.jpeg)']
   },
   getColorWheel: function (numColors) {
-    return _.map(_.range(0, 360, (360 / this.get('sets'))), _.bind(function (hue) { return this.formatColorString(hue, 100, 50); }, this));
-    
+    return _.map(_.range(0, 360, (360 / this.get('cardFaces').length)), _.bind(function (hue) { return this.formatColorString(hue, 100, 50); }, this));
   },
   formatColorString: function (h, s, l) {
     return "hsl("+h+", "+s+"%, "+l+"%)";

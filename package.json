@@ -4,7 +4,8 @@
   "description": "a simple memory game, implemented using backbone.js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "compile": "browserify src/app.js -o dist/main.js"
   },
   "author": "Zach Donovan",
   "license": "Unlicensed",
