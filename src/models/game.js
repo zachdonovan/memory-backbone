@@ -18,7 +18,6 @@ module.exports = Backbone.Model.extend({
   initialize: function () {
     this.listenTo(Backbone, "correctGuess", this.incrementCorrect);
     this.listenTo(Backbone, "incorrectGuess", this.incrementTotal);
-
   },
   incrementCorrect: function () {
     this.increment('correctGuesses');
@@ -37,5 +36,12 @@ module.exports = Backbone.Model.extend({
       this.set('gameOver', true);
     }
 
+  },
+  restart: function (settings) {
+    this.set({ correctGuesses: 0,
+               totalGuesses:   0,
+               currentScore:   0,
+               gameOver:       false
+    });
   }
 });
