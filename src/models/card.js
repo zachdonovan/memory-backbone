@@ -1,3 +1,7 @@
+/*
+ * Card
+ * a basic model for individual memory tiles
+ */
 var _ = require('lodash'),
   Backbone = require('../safeBackbone');
 

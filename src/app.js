@@ -12,12 +12,13 @@ player = new Player();
 game = new Game();
 cards = CardFactory(settings);
 
-game.on('change:gameOver', function () {
-  var reset = confirm('would you like to play again?');
-  if (reset) {
-    cards.invoke('set', { faceUp: false });
-    game.restart(settings);
-
+game.on('change:gameOver', function (model, value) {
+  if (value) {
+    var reset = confirm('would you like to play again?');
+    if (reset) {
+      cards.invoke('set', { faceUp: false });
+      game.restart(settings);
+    }
   }
 });
 

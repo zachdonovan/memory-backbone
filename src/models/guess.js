@@ -1,3 +1,7 @@
+/*
+ * Guess
+ * a model for tracking user guesses
+ */
 var _ = require('lodash'),
     CardCollection = require('../collections/cardCollection'),
     Backbone = require('../safeBackbone');
