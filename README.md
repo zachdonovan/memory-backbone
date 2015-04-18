@@ -46,7 +46,7 @@ all the cards, and render on document ready.
 - _Backbone.trigger_ - throughout the application, you'll notice the use
 of Backbone as an application-wide event bus. This is fine for small apps,
 but for larger ones a module-level event bus might be best (e.g.,
-`GuessBus = _.extend({}, Backbone.Events)`.
+`GuessBus = _.extend({}, Backbone.Events)`).
 
 
 # Feature Ideas
